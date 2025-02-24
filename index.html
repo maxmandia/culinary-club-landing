@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Culinary Club</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Culinary Club</h1>
+    </header>
+
+    <main>
+      <section class="reservation-info">
+        <h2>Reservation Concierge Service</h2>
+        <p>
+          This is a reservation concierge service for New York City. Please opt
+          in to receive status updates about your reservations to continue.
+        </p>
+        <div class="opt-in">
+          <label>
+            <input type="checkbox" id="statusOptIn" />
+            I agree to receive status updates about my reservations
+          </label>
+        </div>
+
+        <button id="continueBtn" class="continue-btn" disabled>Continue</button>
+      </section>
+    </main>
+
+    <script>
+      document
+        .getElementById("statusOptIn")
+        .addEventListener("change", function () {
+          document.getElementById("continueBtn").disabled = !this.checked;
+        });
+
+      document
+        .getElementById("continueBtn")
+        .addEventListener("click", function () {
+          window.location.href = "phone.html";
+        });
+    </script>
+  </body>
+</html>
