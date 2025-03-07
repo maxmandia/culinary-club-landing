@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms Agreement - Culinary Club</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Culinary Club App</h1>
+    </header>
+
+    <main>
+      <section class="opt-in-section">
+        <div class="opt-in">
+          <h2>Terms Agreement</h2>
+          <p>Do you agree to these terms?</p>
+          <label>
+            <input type="checkbox" id="statusOptIn" />
+            I agree to receive
+            <strong>reservation notification messages</strong> about my
+            reservations. I understand that I will receive a text message about
+            the status of every reservation I have, data rates may apply, and I
+            can opt out at any time by replying STOP.
+          </label>
+        </div>
+
+        <button id="continueBtn" class="continue-btn" disabled>Continue</button>
+
+        <div class="legal-links">
+          <a href="privacy-policy.html">Privacy Policy</a> |
+          <a href="terms-of-service.html">Terms of Service</a>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      document
+        .getElementById("statusOptIn")
+        .addEventListener("change", function () {
+          document.getElementById("continueBtn").disabled = !this.checked;
+        });
+
+      document
+        .getElementById("continueBtn")
+        .addEventListener("click", function () {
+          window.location.href = "phone.html";
+        });
+    </script>
+  </body>
+</html>

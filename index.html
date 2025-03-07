@@ -8,29 +8,20 @@
   </head>
   <body>
     <header>
-      <h1>Culinary Club</h1>
+      <h1>Culinary Club App</h1>
     </header>
 
     <main>
       <section class="reservation-info">
-        <h2>Reservation Concierge Service</h2>
+        <h2>Culinary Club App</h2>
         <p>
-          This is a reservation concierge service for New York City. Please opt
-          in to receive status updates about your reservations to continue.
+          Culinary Club App is a reservation concierge service for New York
+          City.
         </p>
-        <div class="opt-in">
-          <p>Do you agree to these terms?</p>
-          <label>
-            <input type="checkbox" id="statusOptIn" />
-            I agree to receive
-            <strong>reservation notification messages</strong> about my
-            reservations. I understand that I will receive a text message about
-            the status of every reservation I have, data rates may apply, and I
-            can opt out at any time by replying STOP.
-          </label>
-        </div>
+      </section>
 
-        <button id="continueBtn" class="continue-btn" disabled>Continue</button>
+      <section class="get-started-section">
+        <button id="getStartedBtn" class="get-started-btn">Get Started</button>
 
         <div class="legal-links">
           <a href="privacy-policy.html">Privacy Policy</a> |
@@ -41,15 +32,9 @@
 
     <script>
       document
-        .getElementById("statusOptIn")
-        .addEventListener("change", function () {
-          document.getElementById("continueBtn").disabled = !this.checked;
-        });
-
-      document
-        .getElementById("continueBtn")
+        .getElementById("getStartedBtn")
         .addEventListener("click", function () {
-          window.location.href = "phone.html";
+          window.location.href = "terms-agreement.html";
         });
     </script>
   </body>
