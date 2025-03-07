@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Culinary Club</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Culinary Club App</h1>
+    </header>
+
+    <main>
+      <section class="info-section">
+        <div class="info-content">
+          <h2>About Our Service</h2>
+
+          <p>
+            Culinary Club is a reservation concierge service in New York City.
+            Our potential customers will text our phone number asking for
+            reservations on a certain date and time. We work with potential
+            customers to match them with the best fit.
+          </p>
+
+          <p>
+            Once they purchase a reservation, they will receive SMS updates
+            about the status of their reservations (i.e. cancelled, active,
+            pending, etc).
+          </p>
+        </div>
+
+        <button id="continueBtn" class="continue-btn">Continue</button>
+
+        <div class="legal-links">
+          <a href="privacy-policy.html">Privacy Policy</a> |
+          <a href="terms-of-service.html">Terms of Service</a>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      document
+        .getElementById("continueBtn")
+        .addEventListener("click", function () {
+          window.location.href = "phone.html";
+        });
+    </script>
+  </body>
+</html>
